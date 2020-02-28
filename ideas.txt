@@ -1,0 +1,1 @@
+- show clue when opening the shell 
