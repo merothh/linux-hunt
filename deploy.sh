@@ -31,7 +31,10 @@ echo "\"Key:szxdxcfcv_Next:LocateMyNotSoQuietAncestor" >> /home/$usr_account/.vi
 # 3: copy hestia man page
 cp files/hestia.1.gz /usr/share/man/man1/hestia.1.gz
 
-# 4: mess up the keyboard layout
+# 4: gnome mines
+cp files/gnome-mines /usr/games/
+
+# 5: mess up the keyboard layout
 mkdir -p /usr/share/remap
 cp files/us-bionic-remap /usr/share/remap/us-remap
 
