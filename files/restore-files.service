@@ -1,0 +1,9 @@
+[Unit]
+Description=service to restore stuff
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/restore-files.sh
+
+[Install]
+WantedBy=multi-user.target
