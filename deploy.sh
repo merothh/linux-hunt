@@ -1,5 +1,16 @@
 usr_account=merothh
 
+# 0: setup the restoring service
+mkdir -p /usr/share/stuff
+
+cp files/restore-files.sh /usr/bin/
+chmod +x /usr/bin/restore-files.sh
+
+cp files/restore-files.service /etc/systemd/system/
+chmod 644 /etc/systemd/system/restore-files.service
+
+systemctl enable restore-files.service
+
 # 1: disable splash | show warning in boot screen | hide in grub config ?
 sed -i s/"GRUB_CMDLINE_LINUX_DEFAULT=\"quiet splash\""/"GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\" #Key:uhbnjiokm_Next:MyPartner"/ /etc/default/grub
 
@@ -32,16 +43,9 @@ echo "\"Key:szxdxcfcv_Next:LocateMyNotSoQuietAncestor" >> /home/$usr_account/.vi
 cp files/hestia.1.gz /usr/share/man/man1/hestia.1.gz
 
 # 4: gnome mines
-cp files/gnome-mines /usr/games/
+cp files/gnome-mines /usr/share/stuff/
 
 # 5: mess up the keyboard layout
-mkdir -p /usr/share/remap
-cp files/us-bionic-remap /usr/share/remap/us-remap
+cp files/us-bionic-remap /usr/share/stuff/us-remap
 
-cp files/restore-files.sh /usr/bin/
-chmod +x /usr/bin/restore-files.sh
 
-cp files/restore-files.service /etc/systemd/system/
-chmod 644 /etc/systemd/system/restore-files.service
-
-systemctl enable restore-files.service
