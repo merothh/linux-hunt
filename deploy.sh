@@ -27,3 +27,6 @@ update-grub
 # 2: show clue when opening vim | hide in vimrc ?
 echo "autocmd VimEnter * echo \"Next:FindMe\"" > /home/$usr_account/.vimrc
 echo "\"Key:szxdxcfcv_Next:LocateMyNotSoQuietAncestor" >> /home/$usr_account/.vimrc
+
+# 3: copy hestia man page
+cp files/hestia.1.gz /usr/share/man/man1/hestia.1.gz
