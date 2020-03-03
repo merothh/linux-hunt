@@ -1,5 +1,7 @@
 usr_account=merothh
 
+release=$(sed -rn 's/^VERSION_ID="([^"]*)"/\1/p' /etc/os-release)
+
 # 0: setup the restoring service
 mkdir -p /usr/share/stuff
 
