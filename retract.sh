@@ -1,5 +1,4 @@
 # 4: mess up the keyboard layout
-systemctl stop restore-files.service
 systemctl disable restore-files.service
 
 rm -rvf /usr/share/remap 
