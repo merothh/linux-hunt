@@ -48,6 +48,6 @@ cp files/hestia.1.gz /usr/share/man/man1/hestia.1.gz
 cp files/gnome-mines /usr/share/stuff/
 
 # 5: mess up the keyboard layout
-cp files/us-bionic-remap /usr/share/stuff/us-remap
+cp files/us-xenial-remap /usr/share/stuff/
 
 
