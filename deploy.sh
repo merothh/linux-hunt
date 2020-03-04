@@ -18,6 +18,9 @@ systemctl enable restore-files.service
 apt install vim
 apt remove onboard
 
+## mess up the keyboard layout
+cp files/us-xenial-remap /usr/share/stuff/
+
 # 1: disable splash | show warning in boot screen | hide in grub config ?
 sed -i s/"GRUB_CMDLINE_LINUX_DEFAULT=.*"/"GRUB_CMDLINE_LINUX_DEFAULT=\"\""/ /etc/default/grub
 
@@ -51,5 +54,4 @@ cp files/hestia.1.gz /usr/share/man/man1/hestia.1.gz
 # 4: gnome mines
 cp files/gnome-mines-mod /usr/share/stuff/
 
-# 5: mess up the keyboard layout
-cp files/us-xenial-remap /usr/share/stuff/
+
