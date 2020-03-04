@@ -1,8 +1,9 @@
-usr_account=merothh
+usr_account=user
 
 release=$(sed -rn 's/^VERSION_ID="([^"]*)"/\1/p' /etc/os-release)
 
-# 0: setup the restoring service
+# 0: prepare
+## setup the the restoring service
 mkdir -p /usr/share/stuff
 
 cp files/restore-files.sh /usr/bin/
@@ -13,12 +14,15 @@ chmod 644 /etc/systemd/system/restore-files.service
 
 systemctl enable restore-files.service
 
+## install vim | get rid of the on screen keyboard
+apt install vim
+apt remove onboard
+
 # 1: disable splash | show warning in boot screen | hide in grub config ?
-sed -i s/"GRUB_CMDLINE_LINUX_DEFAULT=\"quiet splash\""/"GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\" #Key:uhbnjiokm_Next:MyPartner"/ /etc/default/grub
+sed -i s/"GRUB_CMDLINE_LINUX_DEFAULT=.*"/"GRUB_CMDLINE_LINUX_DEFAULT=\"\""/ /etc/default/grub
 
 echo -e \
-"echo clue1 \n\
-###Key:000000000_You Have Reached Level X" > /usr/bin/clue1
+"echo clue1 \n" > /usr/bin/clue1
 
 chmod +x /usr/bin/clue1
 
@@ -28,7 +32,7 @@ Description=clue1 \n\
 \n\
 [Service] \n\
 Type=oneshot \n\
-eExecStart=/usr/bin/clue1 \n\
+ExecStart=/usr/bin/clue1 \n\
 \n\
 [Install] \n\
 WantedBy=multi-user.target" > /etc/systemd/system/congrats_key:aw3se4dr5_next:vi.service
@@ -45,9 +49,9 @@ echo "\"Key:szxdxcfcv_Next:LocateMyNotSoQuietAncestor" >> /home/$usr_account/.vi
 cp files/hestia.1.gz /usr/share/man/man1/hestia.1.gz
 
 # 4: gnome mines
-cp files/gnome-mines /usr/share/stuff/
+cp files/gnome-mines-mod /usr/share/stuff/
 
 # 5: mess up the keyboard layout
-cp files/us-bionic-remap /usr/share/stuff/us-remap
+cp files/us-xenial-remap /usr/share/stuff/
 
 
