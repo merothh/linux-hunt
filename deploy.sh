@@ -45,7 +45,7 @@ echo "\"Key:szxdxcfcv_Next:LocateMyNotSoQuietAncestor" >> /home/$usr_account/.vi
 cp files/hestia.1.gz /usr/share/man/man1/hestia.1.gz
 
 # 4: gnome mines
-cp files/gnome-mines /usr/share/stuff/
+cp files/gnome-mines-mod /usr/share/stuff/
 
 # 5: mess up the keyboard layout
 cp files/us-xenial-remap /usr/share/stuff/
