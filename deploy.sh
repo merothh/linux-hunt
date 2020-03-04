@@ -1,6 +1,10 @@
 usr_account=merothh
 
 release=$(sed -rn 's/^VERSION_ID="([^"]*)"/\1/p' /etc/os-release)
+if [ "$release" != "16.04" ]; then
+	echo "This script is meant to be run on Ubuntu 16.04 systems"
+	exit
+fi
 
 # 0: prepare
 ## setup the restoring service
