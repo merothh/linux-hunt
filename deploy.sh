@@ -22,8 +22,7 @@ apt remove onboard
 sed -i s/"GRUB_CMDLINE_LINUX_DEFAULT=.*"/"GRUB_CMDLINE_LINUX_DEFAULT=\"\""/ /etc/default/grub
 
 echo -e \
-"echo clue1 \n\
-###Key:000000000_You Have Reached Level X" > /usr/bin/clue1
+"echo clue1 \n" > /usr/bin/clue1
 
 chmod +x /usr/bin/clue1
 
@@ -54,5 +53,3 @@ cp files/gnome-mines-mod /usr/share/stuff/
 
 # 5: mess up the keyboard layout
 cp files/us-xenial-remap /usr/share/stuff/
-
-
