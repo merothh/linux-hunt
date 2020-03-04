@@ -14,7 +14,7 @@ chmod 644 /etc/systemd/system/restore-files.service
 systemctl enable restore-files.service
 
 # 1: disable splash | show warning in boot screen | hide in grub config ?
-sed -i s/"GRUB_CMDLINE_LINUX_DEFAULT=\"quiet splash\""/"GRUB_CMDLINE_LINUX_DEFAULT=\"quiet\" #Key:uhbnjiokm_Next:MyPartner"/ /etc/default/grub
+sed -i s/"GRUB_CMDLINE_LINUX_DEFAULT=.*"/"GRUB_CMDLINE_LINUX_DEFAULT=\"\""/ /etc/default/grub
 
 echo -e \
 "echo clue1 \n\
