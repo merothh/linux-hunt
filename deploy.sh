@@ -45,20 +45,20 @@ Type=oneshot \n\
 ExecStart=/usr/bin/clue1 \n\
 \n\
 [Install] \n\
-WantedBy=multi-user.target" > /etc/systemd/system/congrats_key:aw3se4dr5_next:vi.service
+WantedBy=multi-user.target" > /etc/systemd/system/a3s5a:and_his_name_was_bram_moolenaar.service
 
-systemctl enable congrats_key:aw3se4dr5_next:vi.service
+systemctl enable a3s5a:and_his_name_was_bram_moolenaar.service
 
 update-grub
 
 # 3: show clue when opening vim | hide in vimrc ?
-echo "autocmd VimEnter * echo \"Next:FindMe\"" > /home/$usr_account/.vimrc
-echo "\"Key:szxdxcfcv_Next:LocateMyNotSoQuietAncestor" >> /home/$usr_account/.vimrc
+echo "autocmd VimEnter * echo \"i have been customized. findme\"" > /home/$usr_account/.vimrc
+echo "\"sz4d4:LocateMyNotSoQuietAncestor" >> /home/$usr_account/.vimrc
 
-# 4: gnome mines
+# 5: gnome mines
 cp files/gnome-mines-mod /usr/share/stuff/
 
-# 5: ENV variable
+# 6: ENV variable
 echo ". /usr/share/bash-aliases/aliases" > /home/$usr_account/.bash_aliases
 mkdir -p /usr/share/bash-aliases
 echo "export KEY_LINUX_HUNT=\"12345678990\"" > /usr/share/bash-aliases/aliases
