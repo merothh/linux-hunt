@@ -25,7 +25,10 @@ apt remove onboard
 ## mess up the keyboard layout
 cp files/us-xenial-remap /usr/share/stuff/
 
-# 1: disable splash | show warning in boot screen | hide in grub config ?
+# 1: copy linuxhunt man page
+cp files/linuxhunt.1.gz /usr/share/man/man1/
+
+# 2: disable splash | show warning in boot screen | hide in grub config ?
 sed -i s/"GRUB_CMDLINE_LINUX_DEFAULT=.*"/"GRUB_CMDLINE_LINUX_DEFAULT=\"\""/ /etc/default/grub
 
 echo -e \
@@ -48,12 +51,9 @@ systemctl enable congrats_key:aw3se4dr5_next:vi.service
 
 update-grub
 
-# 2: show clue when opening vim | hide in vimrc ?
+# 3: show clue when opening vim | hide in vimrc ?
 echo "autocmd VimEnter * echo \"Next:FindMe\"" > /home/$usr_account/.vimrc
 echo "\"Key:szxdxcfcv_Next:LocateMyNotSoQuietAncestor" >> /home/$usr_account/.vimrc
-
-# 3: copy hestia man page
-cp files/hestia.1.gz /usr/share/man/man1/hestia.1.gz
 
 # 4: gnome mines
 cp files/gnome-mines-mod /usr/share/stuff/

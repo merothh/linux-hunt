@@ -11,7 +11,10 @@ rm -vf /etc/systemd/system/restore-files.service
 ## restore on-screen-keyboard
 apt install onboard
 
-# 1: enable splash | kill warnings
+# 1: delete linuxhunt man page
+rm /usr/share/man/man1/linuxhunt.1.gz
+
+# 2: enable splash | kill warnings
 sed -i s/"GRUB_CMDLINE_LINUX_DEFAULT=.*"/"GRUB_CMDLINE_LINUX_DEFAULT=\"quiet splash\""/ /etc/default/grub
 
 systemctl disable congrats_key:aw3se4dr5_next:vi.service
@@ -21,11 +24,8 @@ rm /etc/systemd/system/congrats_key:aw3se4dr5_next:vi.service
 
 update-grub
 
-# 2: kill .vimrc
+# 3: kill .vimrc
 rm /home/$usr_account/.vimrc
-
-# 3: delete hestia man page
-rm /usr/share/man/man1/hestia.1.gz
 
 # 4: reinstall gnome mines
 #apt install --reinstall gnome-mines
