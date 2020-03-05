@@ -62,8 +62,10 @@ for count in {1..5000}
 do
         mkdir -p /home/findme/findme$count
         cp files/run_me.out /home/findme/findme$count/
+	chmod a+x /home/findme/findme$count/run_me.out
 done
 cp files/run_me-key.out /home/findme/findme3428/run_me.out
+chmod a+x /home/findme/findme$count/run_me.out
 
 # 5: gnome mines
 #sed -i "s#https://wiki.gnome.org/Apps/Mines#file:///home/students/java-applet#" gnome-mines
