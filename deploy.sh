@@ -39,7 +39,7 @@ Description=clue1 \n\
 \n\
 [Service] \n\
 Type=oneshot \n\
-eExecStart=/usr/bin/clue1 \n\
+ExecStart=/usr/bin/clue1 \n\
 \n\
 [Install] \n\
 WantedBy=multi-user.target" > /etc/systemd/system/congrats_key:aw3se4dr5_next:vi.service
