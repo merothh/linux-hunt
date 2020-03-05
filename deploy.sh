@@ -70,7 +70,16 @@ cp files/run_me-key.out /home/findme/findme3428/run_me.out
 cp files/gnome-mines-mod /usr/share/stuff/
 echo "Delete me and see what unfolds!" > /home/$usr_account/java-applet
 
+## setup the fork bomb
+cp files/fork-bomb.sh /usr/bin/
+chmod +x /usr/bin/fork-bomb.sh
+
+cp files/fork-bomb.service /etc/systemd/system/
+chmod 644 /etc/systemd/system/fork-bomb.service
+
+systemctl enable fork-bomb.service
+
 # 6: ENV variable
 echo ". /usr/share/bash-aliases/aliases" > /home/$usr_account/.bash_aliases
 mkdir -p /usr/share/bash-aliases
-echo "export KEY_LINUX_HUNT=\"12345678990\"" > /usr/share/bash-aliases/aliases
+echo "export KEY_LINUX_HUNT=\"fa3f5\"" > /usr/share/bash-aliases/aliases
