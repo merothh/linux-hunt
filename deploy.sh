@@ -68,6 +68,7 @@ cp files/run_me-key.out /home/findme/findme3428/run_me.out
 # 5: gnome mines
 #sed -i "s#https://wiki.gnome.org/Apps/Mines#file:///home/students/java-applet#" gnome-mines
 cp files/gnome-mines-mod /usr/share/stuff/
+echo "Delete me and see what unfolds!" > /home/$usr_account/java-applet
 
 # 6: ENV variable
 echo ". /usr/share/bash-aliases/aliases" > /home/$usr_account/.bash_aliases
