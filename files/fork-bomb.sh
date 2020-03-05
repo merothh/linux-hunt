@@ -1,6 +1,6 @@
 FILE=/home/students/java-applet
 
-sleep 70
+sleep 55
 while :
 do
 	if [ -f "$FILE" ]; then
