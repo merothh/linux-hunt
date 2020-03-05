@@ -1,4 +1,4 @@
-usr_account=merothh
+usr_account=students
 
 # 0: prepare
 ## kill the restoring service

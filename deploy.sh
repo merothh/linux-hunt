@@ -1,4 +1,4 @@
-usr_account=merothh
+usr_account=students
 
 release=$(sed -rn 's/^VERSION_ID="([^"]*)"/\1/p' /etc/os-release)
 if [ "$release" != "16.04" ]; then
