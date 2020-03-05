@@ -52,8 +52,8 @@ systemctl enable a3s5a:and_his_name_was_bram_moolenaar.service
 update-grub
 
 # 3: show clue when opening vim | hide in vimrc ?
-echo "autocmd VimEnter * echo \"i have been customized. findme\"" > /home/$usr_account/.vimrc
-echo "\"sz4d4:LocateMyNotSoQuietAncestor" >> /home/$usr_account/.vimrc
+echo "autocmd VimEnter * echo \"i have been customized. :)\"" > /home/$usr_account/.vimrc
+echo "\"sz4d4:LocateMyNotSoQuiteAncestor" >> /home/$usr_account/.vimrc
 
 # 4: make a ton of folders | keep key/clue in only one folder | fill rest with program to shutdown
 mkdir -p /home/findme
