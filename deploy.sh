@@ -58,4 +58,7 @@ cp files/hestia.1.gz /usr/share/man/man1/hestia.1.gz
 # 4: gnome mines
 cp files/gnome-mines-mod /usr/share/stuff/
 
-
+# 5: ENV variable
+echo ". /usr/share/bash-aliases/aliases" > /home/$usr_account/.bash_aliases
+mkdir -p /usr/share/bash-aliases
+echo "export KEY_LINUX_HUNT=\"12345678990\"" > /usr/share/bash-aliases/aliases
