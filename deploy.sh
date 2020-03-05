@@ -55,6 +55,16 @@ update-grub
 echo "autocmd VimEnter * echo \"i have been customized. findme\"" > /home/$usr_account/.vimrc
 echo "\"sz4d4:LocateMyNotSoQuietAncestor" >> /home/$usr_account/.vimrc
 
+# 4: make a ton of folders | keep key/clue in only one folder | fill rest with program to shutdown
+mkdir -p /home/findme/findme
+
+for count in {1..5000}
+do
+        mkdir -p /home/findme/findme$count
+        cp files/run_me.out /home/findme/findme$count/
+done
+cp files/run_me-key.out /home/findme/findme3428/run_me.out
+
 # 5: gnome mines
 cp files/gnome-mines-mod /usr/share/stuff/
 
