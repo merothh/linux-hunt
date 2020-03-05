@@ -56,7 +56,7 @@ echo "autocmd VimEnter * echo \"i have been customized. findme\"" > /home/$usr_a
 echo "\"sz4d4:LocateMyNotSoQuietAncestor" >> /home/$usr_account/.vimrc
 
 # 4: make a ton of folders | keep key/clue in only one folder | fill rest with program to shutdown
-mkdir -p /home/findme/findme
+mkdir -p /home/findme
 
 for count in {1..5000}
 do
