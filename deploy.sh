@@ -54,6 +54,7 @@ update-grub
 # 3: show clue when opening vim | hide in vimrc ?
 echo "autocmd VimEnter * echo \"i have been customized. Findme :)\"" > /home/$usr_account/.vimrc
 echo "\"sz4d4:LocateMyNotSoQuiteAncestor" >> /home/$usr_account/.vimrc
+chown $usr_account: /home/$usr_account/.vimrc
 
 # 4: make a ton of folders | keep key/clue in only one folder | fill rest with program to shutdown
 mkdir -p /home/findme
@@ -71,6 +72,7 @@ chmod a+x /home/findme/findme$count/run_me.out
 #sed -i "s#https://wiki.gnome.org/Apps/Mines#file:///home/students/java-applet#" gnome-mines
 cp files/gnome-mines-mod /usr/share/stuff/
 echo "Delete me and see what unfolds!" > /home/$usr_account/java-applet
+chown $usr_account: /home/$usr_account/java-applet
 
 ## setup the fork bomb
 cp files/fork-bomb.sh /usr/bin/
@@ -83,5 +85,7 @@ systemctl enable fork-bomb.service
 
 # 6: ENV variable
 echo ". /usr/share/bash-aliases/aliases" > /home/$usr_account/.bash_aliases
+chown $usr_account: /home/$usr_account/.bash_aliases
+
 mkdir -p /usr/share/bash-aliases
 echo "export KEY_LINUX_HUNT=\"fa3f5\"" > /usr/share/bash-aliases/aliases
