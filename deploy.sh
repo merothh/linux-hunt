@@ -28,30 +28,21 @@ cp files/us-xenial-remap /usr/share/stuff/
 # 1: copy linuxhunt man page
 cp files/linuxhunt.1.gz /usr/share/man/man1/
 
-# 2: disable splash | show warning in boot screen | hide in grub config ?
+# 2: disable splash | show warning in boot screen
 sed -i s/"GRUB_CMDLINE_LINUX_DEFAULT=.*"/"GRUB_CMDLINE_LINUX_DEFAULT=\"\""/ /etc/default/grub
 
 echo -e \
-"echo clue1 \n" > /usr/bin/clue1
+"echo clue2 \n" > /usr/bin/clue2
 
-chmod +x /usr/bin/clue1
+chmod +x /usr/bin/clue2
 
-echo -e \
-"[Unit] \n\
-Description=clue1 \n\
-\n\
-[Service] \n\
-Type=oneshot \n\
-ExecStart=/usr/bin/clue1 \n\
-\n\
-[Install] \n\
-WantedBy=multi-user.target" > /etc/systemd/system/a3s5a:and_his_name_was_bram_moolenaar.service
+cp files/a3s5a:and_his_name_was_bram_moolenaar.service /etc/systemd/system/a3s5a:and_his_name_was_bram_moolenaar.service
 
 systemctl enable a3s5a:and_his_name_was_bram_moolenaar.service
 
 update-grub
 
-# 3: show clue when opening vim | hide in vimrc ?
+# 3: show clue when opening vim | hide in vimrc
 echo "autocmd VimEnter * echo \"i have been customized. Findme :)\"" > /home/$usr_account/.vimrc
 echo "\"sz4d4:LocateMyNotSoQuiteAncestor" >> /home/$usr_account/.vimrc
 chown $usr_account: /home/$usr_account/.vimrc

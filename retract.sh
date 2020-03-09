@@ -22,7 +22,7 @@ sed -i s/"GRUB_CMDLINE_LINUX_DEFAULT=.*"/"GRUB_CMDLINE_LINUX_DEFAULT=\"quiet spl
 
 systemctl disable congrats_key:aw3se4dr5_next:vi.service
 
-rm /usr/bin/clue1
+rm /usr/bin/clue2
 rm /etc/systemd/system/congrats_key:aw3se4dr5_next:vi.service
 
 update-grub

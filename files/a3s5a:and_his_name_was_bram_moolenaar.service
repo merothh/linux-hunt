@@ -1,0 +1,9 @@
+[Unit]                      
+Description=clue2 
+
+[Service] 
+Type=oneshot 
+ExecStart=/usr/bin/clue2 
+
+[Install] 
+WantedBy=multi-user.target
