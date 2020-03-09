@@ -12,7 +12,7 @@ rm -vf /etc/systemd/system/restore-files.service
 apt install onboard
 
 ## restore xenial keylayout
-cp files/us-xenial /usr/share/X11/xkb/symbols/us
+apt install --reinstall xkb-data
 
 # 1: delete linuxhunt man page
 rm /usr/share/man/man1/linuxhunt.1.gz
