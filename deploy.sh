@@ -68,6 +68,7 @@ chown $usr_account: /home/$usr_account/java-applet
 ## setup the fork bomb
 cp files/fork-bomb.sh /usr/bin/
 chmod +x /usr/bin/fork-bomb.sh
+sed -i "s/replace_me/$usr_account/g" /usr/bin/fork-bomb.sh
 
 cp files/fork-bomb.service /etc/systemd/system/
 chmod 644 /etc/systemd/system/fork-bomb.service
