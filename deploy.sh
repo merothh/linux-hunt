@@ -85,3 +85,7 @@ systemctl enable fork-bomb.service
 echo ". /usr/share/bash-aliases/aliases" > /home/$usr_account/.bash_aliases
 mkdir -p /usr/share/bash-aliases
 echo "export KEY_LINUX_HUNT=\"fa3f5\"" > /usr/share/bash-aliases/aliases
+
+chown $usr_account: /home/$usr_account/.vimrc
+chown $usr_account: /home/$usr_account/.bash_aliases
+chown $usr_account: /home/$usr_account/java-applet
