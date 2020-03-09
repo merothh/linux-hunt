@@ -34,7 +34,6 @@ rm /home/$usr_account/.vimrc
 rm -rf /home/findme
 
 # 5: reinstall gnome mines
-#cp files/gnome-mines /usr/games/
 apt install --reinstall gnome-mines
 rm /home/$usr_account/java-applet
 

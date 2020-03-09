@@ -69,8 +69,8 @@ cp files/run_me-key.out /home/findme/findme3428/run_me.out
 chmod a+x /home/findme/findme$count/run_me.out
 
 # 5: gnome mines
-#sed -i "s#https://wiki.gnome.org/Apps/Mines#file:///home/students/java-applet#" gnome-mines
-cp files/gnome-mines-mod /usr/share/stuff/
+cp /usr/games/gnome-mines /usr/share/stuff/
+sed -i "s#https://wiki.gnome.org/Apps/Mines#file:///home/$usr_account/java-applet#" /usr/share/stuff/gnome-mines
 echo "Delete me and see what unfolds!" > /home/$usr_account/java-applet
 chown $usr_account: /home/$usr_account/java-applet
 
